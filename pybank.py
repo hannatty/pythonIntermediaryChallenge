@@ -48,7 +48,7 @@ def balance():
   print(divisor_output)
   
     
-def deposit(deposit_amount, balance):
+def deposit(deposit_amount, balance, /):
   deposit_amount = int(input("Digite o valor que deseja depositar: "))
   if deposit_amount > 1:
     balance += deposit_amount
@@ -62,7 +62,7 @@ def deposit(deposit_amount, balance):
     print(divisor_output)
     
     
-def withdraw(withdraw_amount):
+def withdraw(*, withdraw_amount):
   withdraw_amount = int(input("Digite o valor que deseja sacar: "))
   if withdraw_counter <= 3:
     if withdraw_amount <= WITHDRAWAL_LIMIT_AMOUNT and withdraw_amount <= balance:
@@ -82,7 +82,7 @@ def withdraw(withdraw_amount):
       print(divisor_output)
     
     
-  def extract():
+  def extract(balance, /, *, extract):
     print("***************************************************")
     print(f"\nExtrato gerado em {brl_date} \n")
     print("***************************************************")
